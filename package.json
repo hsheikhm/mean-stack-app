@@ -2,7 +2,7 @@
   "name": "mean-stack-app",
   "version": "1.0.0",
   "description": "Basis to building an app using the MEAN stack: MongoDB, ExpressJS, AngularJS, NodeJS",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/hsheikhm/mean-stack-app/issues"
   },
-  "homepage": "https://github.com/hsheikhm/mean-stack-app#readme"
+  "homepage": "https://github.com/hsheikhm/mean-stack-app#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.12"
+  }
 }
