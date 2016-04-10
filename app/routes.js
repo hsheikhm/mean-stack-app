@@ -1,5 +1,6 @@
 // grab the nerd model
 var Nerd = require('./models/nerd');
+var path = require('path');
 
 module.exports = function(app){
 
@@ -21,7 +22,7 @@ module.exports = function(app){
 
   // route to handle all angular requests
   app.get('*', function(req, res){
-    res.sendfile('./public/views/index.html'); // load our public/index.html file
+    res.sendFile(path.join(__dirname, "../public/views/index.html")); // load our public/index.html file
   });
 
 };
