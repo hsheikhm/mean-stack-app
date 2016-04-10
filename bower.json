@@ -1,0 +1,25 @@
+{
+  "name": "mean-stack-app",
+  "description": "Basis to building an app using the MEAN stack: MongoDB, ExpressJS, AngularJS, NodeJS",
+  "main": "server.js",
+  "authors": [
+    "Hamza Sheikh <hsheikhm@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hsheikhm/mean-stack-app",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest"
+  }
+}
