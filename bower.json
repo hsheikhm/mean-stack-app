@@ -7,14 +7,6 @@
   ],
   "license": "ISC",
   "homepage": "https://github.com/hsheikhm/mean-stack-app",
-  "moduleType": [],
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
     "bootstrap": "latest",
     "font-awesome": "latest",
