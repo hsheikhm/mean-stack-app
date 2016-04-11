@@ -9,13 +9,19 @@
           <li>
             {{ nerd.name }}
             <button ng-click="deleteNerd(nerd)">DELETE nerd</button>
+            <button ng-click="selectNerd(nerd)">UPDATE nerd's name</button>
+            <form ng-show="showForm(nerd)" ng-submit="updateNerd(nerd)">
+              <label for="newName">New Name:</label>
+              <input name="name" ng-model="data.newName">
+              <input type="submit" value="Update!">
+            </form>
           </li>
         </ul>
     </div>
 
     <div>
       <h4>CREATE a Nerd!</h4>
-      <form ng-submit='newNerd()'>
+      <form ng-submit="newNerd()">
         <label for="nerdName">Name:</label>
         <input name="name" ng-model="nerdName">
         <input type="submit" value="Create!">

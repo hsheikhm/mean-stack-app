@@ -58,6 +58,32 @@ module.exports = function(app){
     });
   });
 
+  // UPDATE a nerd
+  app.put('/api/nerds/:nerd_id', function(req, res){
+    Nerd.findById(req.params.nerd_id, function(err, nerd){
+      if(err){
+        res.send(err);
+      }
+      nerd.name = req.body.name;
+      nerd.save(function(err){
+        if(err){
+          res.send(err);
+        }
+
+        Nerd.find(function(err, nerds){
+          if(err){
+            res.send(err);
+          }
+          var responseObject = {
+            message: "Nerd successfully updated!",
+            data: nerds
+          };
+          res.json(responseObject);
+        });
+      });
+    });
+  });
+
   // route to handle all angular requests
   app.get('*', function(req, res){
     res.sendFile(path.join(__dirname, "../public/index.html")); // load our public/index.html file
