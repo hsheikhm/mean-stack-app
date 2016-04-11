@@ -21,7 +21,18 @@ angular.module('MainCtrl', []).controller('MainController', ['$scope', 'Nerd',
           console.log(response.message);
         })
         .error(function(err){
-          console.log("Error " + err);
+          console.log('Error ' + err);
+        });
+    };
+
+    $scope.deleteNerd = function(nerd){
+      Nerd.delete(nerd._id)
+        .success(function(response){
+          $scope.allNerds = response.data;
+          console.log(response.message);
+        })
+        .error(function(err){
+          console.log('Error: ' + err);
         });
     };
 

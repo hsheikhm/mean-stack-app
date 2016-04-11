@@ -37,9 +37,26 @@ module.exports = function(app){
   });
 
   // DELETE a nerd
+  app.delete('/api/nerds/:nerd_id', function(req, res){
+    Nerd.remove({
+      _id : req.params.nerd_id
+    }, function(err, nerd){
+      if(err){
+        res.send(err);
+      }
 
-
-
+      Nerd.find(function(err, nerds){
+        if(err){
+          res.send(err);
+        }
+        var responseObject = {
+          message: "Nerd successfully deleted!",
+          data: nerds
+        };
+        res.json(responseObject);
+      });
+    });
+  });
 
   // route to handle all angular requests
   app.get('*', function(req, res){

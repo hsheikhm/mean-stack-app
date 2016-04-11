@@ -6,7 +6,10 @@
     <div>
       <h4>List of all Nerds</h4>
         <ul ng-repeat="nerd in allNerds">
-          <li>{{ nerd.name }}</li>
+          <li>
+            {{ nerd.name }}
+            <button ng-click="deleteNerd(nerd)">DELETE nerd</button>
+          </li>
         </ul>
     </div>
 
